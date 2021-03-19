@@ -5,6 +5,7 @@
 This guide is based on running GNS3 in a ubuntu host. 
 Depending on your usage the host will need a bit of ram and some cpu.
 If you plan on running a simulation with cisco images and vms i would recommend up to 12 cores and 32 gigabytes of ram.
+You will also need a lot of storage if you plan on running vm-s. I plan on running up to 4 checkpoint firewall vm-s and a few Cisco/arista IOU-s. Therfore i have allocated 1tb of ssd storage for the ubuntu host.
 
 
 Install default ubuntu server installation, and copy over ssh keys.
