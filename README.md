@@ -2,8 +2,10 @@
 
 <h2> Initial installation </h2>
 
+This guide is based on running GNS3 in a ubuntu host. 
+Depending on your usage the host will need a bit of ram and some cpu.
+If you plan on running a simulation with cisco images and vms i would recommend up to 12 cores and 32 gigabytes of ram.
 
-The host uses 16gig ram and 6 cpu cores
 
 Install default ubuntu server installation, and copy over ssh keys.
 
