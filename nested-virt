@@ -1,0 +1,1 @@
+In order to run GNS3 inside a ubuntu Vm we need nested virtualization support.
