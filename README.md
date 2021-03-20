@@ -55,3 +55,40 @@ done
 <h2>Nested Virtualization</h2>
 
 If you run the ubuntu host virtualized we need nested virtualization enabled:
+The following commands are run on the virtualization host (proxmox host)
+
+To check if nested virtulizatoin is enabled, bring up terminal/SSH/Shell, execute following command
+```
+cat /sys/module/kvm_intel/parameters/nested
+```
+If it returns "N" it's disabled.
+To enable
+```
+# Intel
+echo "options kvm-intel nested=Y" > /etc/modprobe.d/kvm-intel.conf
+ 
+# AMD
+echo "options kvm-amd nested=1" > /etc/modprobe.d/kvm-amd.conf
+```
+Then
+```
+modprobe -r kvm_intel
+modprobe kvm_intel
+```
+Note: If error returns, just reboot the PVE host
+
+To enable nested virtulizatoin for guest VMs
+
+Intel CPU:
+– Set the CPU type for VMs to “host”
+
+AMD CPU:
+– Set the CPU type for VMs to “host”
+– Add following flags to the configuration file
+
+args: -cpu host,+svm
+
+5 We can use following command to check/verify hardware virtualization support is enabled or not on Linux OSs
+```
+egrep '(vmx|svm)' --color=always /proc/cpuinfo
+```
