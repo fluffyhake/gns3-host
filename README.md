@@ -1,4 +1,5 @@
 # gns3-host
+Be sure to check this out for standalone server: https://docs.gns3.com/docs/getting-started/installation/remote-server
 
 <h2> Initial installation </h2>
 
